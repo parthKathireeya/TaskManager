@@ -1,0 +1,70 @@
+Laravel Task Management Installation Guide
+-------------------------------------------
+
+Prerequisites
+
+    PHP 8.1 or higher
+    Composer – Dependency management tool for PHP
+
+-------------------------------------------------------
+
+Installation Steps
+
+    Step 1: Extract the Project Files
+        - Download and unzip the provided .zip file containing the project source code.
+        - Move the extracted project folder to your server directory, typically located in xampp/htdocs for XAMPP users.
+
+    Step 2: Create a New Database
+        - Open your database management tool (e.g., phpMyAdmin).
+        - Create a new database with the name taskManager.
+        - Import the provided .sql file into the newly created database.
+
+    Step 3: Configure Environment Settings
+        - Navigate to the project directory and open the .env file.
+
+        -   Set the following values:
+
+            APP_URL: Set this to your project directory URL (e.g., http://localhost/taskManager).
+
+            Database Credentials: Update the database connection settings, such as DB_DATABASE, DB_USERNAME, and DB_PASSWORD, with the correct values for your setup.
+
+                Example:
+                --------
+
+                APP_URL=http://localhost/taskManager
+                DB_CONNECTION=mysql
+                DB_HOST=127.0.0.1
+                DB_PORT=3306
+                DB_DATABASE=taskManager
+                DB_USERNAME=root
+                DB_PASSWORD=your_password
+
+    Step 4: Install Dependencies and Run Migrations
+
+        Open your command line or terminal and navigate to your project directory.
+
+            Run the following commands:
+            composer install
+            Run database migrations
+            php artisan migrate
+            optimize the application
+            php artisan optimize
+
+        Start the development server:
+
+            php artisan serve
+
+------------------------------------------------------------------------------------------------
+
+Additional Notes
+If you encounter any issues related to missing PHP extensions or dependencies, ensure that you have the required PHP version (8.1 or higher) and Composer installed correctly.
+
+This guide provides a simple and clear explanation of the steps needed to install and set up the Laravel Task Management project on your local server.
+
+
+
+
+
+
+
+
